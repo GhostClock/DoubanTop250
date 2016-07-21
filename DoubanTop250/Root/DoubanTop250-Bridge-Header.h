@@ -13,5 +13,6 @@
 #import "UIImage+AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
 #import "CWStarRateView.h"
+#import "MBProgressHUD.h"
 
 #endif /* DoubanTop250_Bridge_Header_h */

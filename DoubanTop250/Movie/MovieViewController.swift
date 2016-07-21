@@ -13,8 +13,8 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
     
     var _collectionView:UICollectionView!
     let CellID = "cell"
-    
     var dataSource = NSMutableArray()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,11 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
         let netWorking = NetWorking()
         
         if netWorking.netWorking() != 0 {
+            
+            let lable = MBProgressHUD.showHUDAddedTo(self.view, animated: true).label
+            lable.text = "数据加载中…"
+            lable.textColor = UIColor.grayColor()
+            
             getDate(0, count: 10)
         }else{
             
@@ -100,6 +105,8 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
         let data = MovieData()
         data.createGetData("https://api.douban.com/v2/movie/top250?start=\(start)&count=\(count)") { (responseObject) in
             
+            
+            
             if (responseObject["title"] != nil) {
                 let dict:NSDictionary = responseObject as! NSDictionary
                 
@@ -123,6 +130,8 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
                         
                         self.dataSource.addObject(movieModel)
                     }
+                    
+                    MBProgressHUD.hideHUDForView(self.view, animated: true)
                     self._collectionView .reloadData()
                 }else{
                     print(dict)

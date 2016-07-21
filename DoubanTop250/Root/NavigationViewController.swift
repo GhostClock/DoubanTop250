@@ -21,7 +21,7 @@ class NavigationViewController: UINavigationController,UINavigationControllerDel
     
     func customNavBar() {
 
-        self.navigationBar.barTintColor = UIColor(red: 31/255.0, green:143/255.0,blue:255/255.0,alpha:1)
+        self.navigationBar.barTintColor = UIColor.lightGrayColor()
         
         let dict:NSDictionary = NSDictionary(object: UIColor(red: 255/255.0, green:255/255.0,blue:255/255.0,alpha:1),forKey:NSForegroundColorAttributeName)
         navigationBar.titleTextAttributes = dict as? [String : AnyObject]
