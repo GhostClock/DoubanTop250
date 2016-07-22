@@ -7,21 +7,21 @@
 //
 
 import UIKit
+import Alamofire
 
 class MovieData: NSObject {
 
-    typealias createGetDataBlock = (responseObject:AnyObject) -> ()
+    typealias createGetDataBlock = (responseObject:NSDictionary) -> ()
 
     func createGetData(URL:NSString,blockProerty:createGetDataBlock){
         
-        let manager = AFHTTPSessionManager()
-        manager.GET(URL as String, parameters: nil, progress: nil, success: { (task:NSURLSessionDataTask, responseObject:AnyObject?) in
+        Alamofire.request(.GET,URL as String).responseJSON{ response  in
             
-            blockProerty(responseObject: responseObject!)  //需要拆包
-            
-        }) { (task:NSURLSessionDataTask?, error:NSError) in
-            
-            blockProerty(responseObject: error)
+            if((response.result.value) != nil){
+                blockProerty(responseObject: response.result.value! as! NSDictionary)
+            }else{
+                blockProerty(responseObject:["state":"error"])
+            }
         }
     }
 }

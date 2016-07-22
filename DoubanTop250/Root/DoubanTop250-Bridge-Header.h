@@ -9,9 +9,6 @@
 #ifndef DoubanTop250_Bridge_Header_h
 #define DoubanTop250_Bridge_Header_h
 
-#import "AFNetworking.h"
-#import "UIImage+AFNetworking.h"
-#import "UIImageView+AFNetworking.h"
 #import "CWStarRateView.h"
 #import "MBProgressHUD.h"
 

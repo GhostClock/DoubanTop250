@@ -77,8 +77,8 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
         
         let dataModel = dataSource[indexPath.item] as! MovieModel
         
-        let imageUrl:NSURL = NSURL(string: "\(dataModel.images_url["large"]!)")!
-        cell.imageView .setImageWithURL(imageUrl, placeholderImage: nil)
+//        let imageUrl:NSURL = NSURL(string: "\(dataModel.images_url["large"]!)")!
+//        cell.imageView .setImageWithURL(imageUrl, placeholderImage: nil)
         cell.starScoreView.scorePercent = (dataModel.rating["average"]! as! CGFloat) / 10
         cell.scoreLable.text    =  "\(dataModel.rating["average"]! as! Double) 分"
         cell.cnTitleLable.text  =  "\(dataModel.title)"
@@ -105,10 +105,8 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
         let data = MovieData()
         data.createGetData("https://api.douban.com/v2/movie/top250?start=\(start)&count=\(count)") { (responseObject) in
             
-            
-            
             if (responseObject["title"] != nil) {
-                let dict:NSDictionary = responseObject as! NSDictionary
+                let dict:NSDictionary = responseObject 
                 
                 if (dict["subjects"] != nil) {
                     
