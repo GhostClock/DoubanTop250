@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AlamofireImage
 
 class MovieViewController: RootViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -77,8 +77,9 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
         
         let dataModel = dataSource[indexPath.item] as! MovieModel
         
-//        let imageUrl:NSURL = NSURL(string: "\(dataModel.images_url["large"]!)")!
-//        cell.imageView .setImageWithURL(imageUrl, placeholderImage: nil)
+        let imageUrl:NSURL = NSURL(string: "\(dataModel.images_url["large"]!)")!
+        cell.imageView.af_setImageWithURL(imageUrl)
+    
         cell.starScoreView.scorePercent = (dataModel.rating["average"]! as! CGFloat) / 10
         cell.scoreLable.text    =  "\(dataModel.rating["average"]! as! Double) 分"
         cell.cnTitleLable.text  =  "\(dataModel.title)"

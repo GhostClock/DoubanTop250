@@ -66,7 +66,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     var imageView:UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.lightGrayColor()
+        imageView.backgroundColor = UIColor.whiteColor()
         return imageView
     }()
     
