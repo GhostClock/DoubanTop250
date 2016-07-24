@@ -14,6 +14,10 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
     var _collectionView:UICollectionView!
     let CellID = "cell"
     var dataSource = NSMutableArray()
+    let footer = MJRefreshAutoNormalFooter()
+    let herder = MJRefreshNormalHeader()
+    
+    var count = 10
     
 
     override func viewDidLoad() {
@@ -30,8 +34,9 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
             let lable = MBProgressHUD.showHUDAddedTo(self.view, animated: true).label
             lable.text = "数据加载中…"
             lable.textColor = UIColor.grayColor()
+            getDate(0, count: count)
             
-            getDate(0, count: 10)
+            createFooterRefresh()
         }else{
             
             let alert: UIAlertController = UIAlertController(title: "提示", message:"请检查网络", preferredStyle: .Alert)
@@ -60,6 +65,29 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
         _collectionView .registerClass(MovieCollectionViewCell.self, forCellWithReuseIdentifier: CellID)
         
         self.view .addSubview(_collectionView)
+        
+        createHeaderRefresh()
+    }
+    //下拉加载更多
+    func createFooterRefresh() -> Void {
+        footer.setRefreshingTarget(self, refreshingAction: #selector(self.footerRefreshAction))
+        _collectionView.mj_footer = footer
+    }
+    
+    func footerRefreshAction() -> Void {
+        count += 10
+        getDate(count, count: 10)
+    }
+    
+    //上拉刷新
+    func createHeaderRefresh() -> Void {
+        herder.setRefreshingTarget(self, refreshingAction: #selector(self.headerRefreshAction))
+        _collectionView.mj_header = herder
+    }
+    
+    func headerRefreshAction() -> Void {
+        dataSource.removeAllObjects()
+        getDate(0, count: 10)
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -109,7 +137,7 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
             if (responseObject["title"] != nil) {
                 let dict:NSDictionary = responseObject 
                 
-                if (dict["subjects"] != nil) {
+                if (dict["subjects"]?.count > 0) {
                     
                     for subjectsDic in dict["subjects"] as! NSArray{
                         let movieModel = MovieModel()
@@ -132,8 +160,10 @@ class MovieViewController: RootViewController,UICollectionViewDelegate,UICollect
                     
                     MBProgressHUD.hideHUDForView(self.view, animated: true)
                     self._collectionView .reloadData()
+                    self._collectionView.mj_footer.endRefreshing()
+                    self._collectionView.mj_header.endRefreshing()
                 }else{
-                    print(dict)
+                    self._collectionView.mj_footer.endRefreshingWithNoMoreData()
                 }
             }else{
                 print(responseObject)

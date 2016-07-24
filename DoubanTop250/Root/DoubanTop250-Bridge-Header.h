@@ -11,5 +11,6 @@
 
 #import "CWStarRateView.h"
 #import "MBProgressHUD.h"
+#import "MJRefresh.h"
 
 #endif /* DoubanTop250_Bridge_Header_h */

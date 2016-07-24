@@ -1,0 +1,6 @@
+[submodule "DoubanTop250/Resources/Alamofire/Alamofire"]
+	path = DoubanTop250/Resources/Alamofire/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
+[submodule "DoubanTop250/Resources/AlamofireImage/AlamofireImage"]
+	path = DoubanTop250/Resources/AlamofireImage/AlamofireImage
+	url = https://github.com/Alamofire/AlamofireImage.git
