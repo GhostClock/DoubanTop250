@@ -14,6 +14,15 @@ class MusicViewController: RootViewController {
         super.viewDidLoad()
         navigationItem.title = "音乐"
         self.view.backgroundColor = UIColor.cyan
+        
+        let btn =  CGButton.shendInstance().createButton(frame: CGRect(), bgColor: UIColor.red, title: "按钮", superView: self.view) { (action) in
+            print(action)
+        }
+        btn.snp.makeConstraints { (make) in
+            make.top.equalTo(0)
+            make.left.equalTo(100)
+            make.width.height.equalTo(100)
+        }
     }
 
     override func didReceiveMemoryWarning() {

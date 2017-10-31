@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1314C5FA1FA8B08400617E3D /* CGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314C5F91FA8B08400617E3D /* CGButton.swift */; };
 		13F61E781FA85C5300D458F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E521FA85C5300D458F1 /* AppDelegate.swift */; };
 		13F61E7B1FA85C5300D458F1 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E571FA85C5300D458F1 /* BookViewController.swift */; };
 		13F61E7E1FA85C5300D458F1 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E5C1FA85C5300D458F1 /* MovieCollectionViewCell.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1314C5F91FA8B08400617E3D /* CGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGButton.swift; sourceTree = "<group>"; };
 		13F15E9C1D3DBD9800B2ABC1 /* DoubanTop250.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanTop250.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F61E521FA85C5300D458F1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13F61E571FA85C5300D458F1 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1314C5F81FA8B06700617E3D /* UIkit */ = {
+			isa = PBXGroup;
+			children = (
+				1314C5F91FA8B08400617E3D /* CGButton.swift */,
+			);
+			path = UIkit;
+			sourceTree = "<group>";
+		};
 		13F15E931D3DBD9800B2ABC1 = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +195,7 @@
 		13F61EB71FA86AD500D458F1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1314C5F81FA8B06700617E3D /* UIkit */,
 				13F61EB81FA86AD500D458F1 /* Foundation */,
 				13F61EBA1FA86AD500D458F1 /* StarScore */,
 			);
@@ -366,6 +377,7 @@
 				13F61EBF1FA86AD500D458F1 /* GCFoundation.swift in Sources */,
 				13F61E8A1FA85C5300D458F1 /* RootViewController.swift in Sources */,
 				13F61E7F1FA85C5300D458F1 /* MovieData.swift in Sources */,
+				1314C5FA1FA8B08400617E3D /* CGButton.swift in Sources */,
 				13F61E7E1FA85C5300D458F1 /* MovieCollectionViewCell.swift in Sources */,
 				13F61E831FA85C5300D458F1 /* MusicViewController.swift in Sources */,
 				13F61E801FA85C5300D458F1 /* DetailedViewController.swift in Sources */,
