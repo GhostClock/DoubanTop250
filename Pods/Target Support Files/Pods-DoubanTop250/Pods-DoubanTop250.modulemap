@@ -1,0 +1,6 @@
+framework module Pods_DoubanTop250 {
+  umbrella header "Pods-DoubanTop250-umbrella.h"
+
+  export *
+  module * { export * }
+}
