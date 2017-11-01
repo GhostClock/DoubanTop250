@@ -23,6 +23,20 @@ class MovieData: NSObject {
                 responseFaie(responseData.error!)
             }
         }
-
     }
+}
+
+class MovieModel: NSObject {
+    var rating = NSDictionary()
+    var genres = NSArray()
+    var title = NSString()
+    var casts = NSArray()
+    var collect_count = Double()
+    var original_title = NSString()
+    var subtype = NSString()
+    var directors = NSArray()
+    var year = NSString()
+    var images_url = NSDictionary()
+    var alt = NSString()
+    var id = NSString()
 }

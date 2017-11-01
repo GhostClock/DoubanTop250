@@ -14,40 +14,51 @@ class MovieCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         
         super.init(frame: frame)
-        
-        numberLable.frame = CGRect(x: 5, y: 2, width: 100, height: 20)
-        scoreLable.frame = CGRect(x: numberLable.frame.width + 50/3, y: 4, width: 50, height: 14)
 
-        imageView.frame = CGRect(x: 10, y: numberLable.frame.origin.y + numberLable.frame.size.height + 2, width: self.frame.width - 10 * 2, height: 180)
-        cnTitleLable.frame = CGRect(x: 10, y: imageView.frame.origin.y + imageView.frame.size.height + 2, width: self.frame.width - 10 * 2, height: 15)
-        enTitleLabel.frame = CGRect(x: 10, y: cnTitleLable.frame.origin.y + cnTitleLable.frame.size.height + 2, width: self.frame.width - 10 * 2, height: 15)
-        
         contentView.addSubview(numberLable)
-//        numberLable.snp.makeConstraints { (make) in
-//            make.left.equalTo(5)
-//            make.top.equalTo(2)
-//            make.width.equalTo(100)
-//            make.height.equalTo(20)
-//        }
+        numberLable.snp.makeConstraints { (make) in
+            make.left.equalTo(5)
+            make.top.equalTo(2)
+            make.width.equalTo(100)
+            make.height.equalTo(20)
+        }
         contentView.addSubview(scoreLable)
-//        scoreLable.snp.makeConstraints { (make) in
-//            make.left.equalTo(numberLable).offset(50/3)
-//            make.top.equalTo(4)
-//            make.width.equalTo(50)
-//            make.height.equalTo(14)
-//        }
-        contentView.addSubview(imageView)
-//        imageView.snp.makeConstraints { (make) in
-//            make.left.equalTo(10)
-//            make.top.equalTo(numberLable).offset(2)
-//            make.width.equalTo(self.frame.width - 10 * 2)
-//            make.height.equalTo(180)
-//        }
-        contentView.addSubview(cnTitleLable)
-        contentView.addSubview(enTitleLabel)
+        scoreLable.snp.makeConstraints { (make) in
+            make.right.equalTo(-5)
+            make.top.equalTo(4)
+            make.width.equalTo(50)
+            make.height.equalTo(14)
+        }
         contentView.addSubview(starScoreView)
+        starScoreView.snp.makeConstraints { (make) in
+            make.left.equalTo(50)
+            make.right.equalTo(scoreLable.snp.left).offset(2)
+            make.top.equalTo(4)
+            make.height.equalTo(15)
+        }
+        contentView.addSubview(imageView)
+        imageView.snp.makeConstraints { (make) in
+            make.left.equalTo(10)
+            make.top.equalTo(numberLable.snp.bottom).offset(3)
+            make.right.equalTo(-10)
+            make.height.equalTo(180)
+        }
+        contentView.addSubview(cnTitleLable)
+        cnTitleLable.snp.makeConstraints { (make) in
+            make.left.right.equalTo(10)
+            make.top.equalTo(imageView.snp.bottom).offset(3)
+            make.height.equalTo(15)
+        }
         
-        self.backgroundColor = UIColor.lightGray/*UIColor(red: 230/255.0, green:153/255.0, blue:255/255.0,alpha:0.8)*/
+        contentView.addSubview(enTitleLabel)
+        enTitleLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(10)
+            make.top.equalTo(cnTitleLable.snp.bottom).offset(2)
+            make.width.equalTo(cnTitleLable.snp.width)
+            make.height.equalTo(12)
+        }
+        
+        self.backgroundColor = UIColor(red: 230/255.0, green:153/255.0, blue:255/255.0,alpha:0.8)
         self.layer.masksToBounds = true;
         self.layer.cornerRadius = 5
         self.layer.shadowColor = UIColor.gray.cgColor;

@@ -13,7 +13,6 @@
 		13F61E7E1FA85C5300D458F1 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E5C1FA85C5300D458F1 /* MovieCollectionViewCell.swift */; };
 		13F61E7F1FA85C5300D458F1 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E5D1FA85C5300D458F1 /* MovieData.swift */; };
 		13F61E801FA85C5300D458F1 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E5F1FA85C5300D458F1 /* DetailedViewController.swift */; };
-		13F61E811FA85C5300D458F1 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E601FA85C5300D458F1 /* MovieModel.swift */; };
 		13F61E821FA85C5300D458F1 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E611FA85C5300D458F1 /* MovieViewController.swift */; };
 		13F61E831FA85C5300D458F1 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E631FA85C5300D458F1 /* MusicViewController.swift */; };
 		13F61E881FA85C5300D458F1 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E6E1FA85C5300D458F1 /* NavigationViewController.swift */; };
@@ -29,6 +28,7 @@
 		13F61EC01FA86AD500D458F1 /* b27_icon_star_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F61EBB1FA86AD500D458F1 /* b27_icon_star_gray@2x.png */; };
 		13F61EC11FA86AD500D458F1 /* b27_icon_star_yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F61EBC1FA86AD500D458F1 /* b27_icon_star_yellow@2x.png */; };
 		13F61ECA1FA871FF00D458F1 /* CWStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F61EC91FA871FF00D458F1 /* CWStarRateView.m */; };
+		13F61ECE1FA9620500D458F1 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61ECD1FA9620500D458F1 /* MovieView.swift */; };
 		A9312EA1936D546F97367DAE /* Pods_DoubanTop250.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E515D743F3C4EAD032CCB51 /* Pods_DoubanTop250.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,6 @@
 		13F61E5C1FA85C5300D458F1 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		13F61E5D1FA85C5300D458F1 /* MovieData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
 		13F61E5F1FA85C5300D458F1 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
-		13F61E601FA85C5300D458F1 /* MovieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		13F61E611FA85C5300D458F1 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		13F61E631FA85C5300D458F1 /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		13F61E6E1FA85C5300D458F1 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		13F61EC81FA871FF00D458F1 /* CWStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWStarRateView.h; sourceTree = "<group>"; };
 		13F61EC91FA871FF00D458F1 /* CWStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWStarRateView.m; sourceTree = "<group>"; };
 		13F61ECB1FA8767A00D458F1 /* DoubanTop250-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DoubanTop250-Bridging-Header.h"; sourceTree = "<group>"; };
+		13F61ECD1FA9620500D458F1 /* MovieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		1BCE97F9B334EFD0D5D25DCF /* Pods-DoubanTop250.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanTop250.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanTop250/Pods-DoubanTop250.release.xcconfig"; sourceTree = "<group>"; };
 		397D6E938D0DC130B19B261B /* Pods-DoubanTop250.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanTop250.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanTop250/Pods-DoubanTop250.debug.xcconfig"; sourceTree = "<group>"; };
 		4E515D743F3C4EAD032CCB51 /* Pods_DoubanTop250.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoubanTop250.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +121,8 @@
 		13F61E511FA85C5300D458F1 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				13F61ED01FA9D0EE00D458F1 /* Cell */,
+				13F61ECF1FA9D0D600D458F1 /* View */,
 				13F61E521FA85C5300D458F1 /* AppDelegate.swift */,
 				13F61EB71FA86AD500D458F1 /* Utilities */,
 				13F61E561FA85C5300D458F1 /* Book */,
@@ -142,11 +144,11 @@
 		13F61E5B1FA85C5300D458F1 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				13F61E611FA85C5300D458F1 /* MovieViewController.swift */,
 				13F61E5C1FA85C5300D458F1 /* MovieCollectionViewCell.swift */,
 				13F61E5D1FA85C5300D458F1 /* MovieData.swift */,
+				13F61ECC1FA9605600D458F1 /* View */,
 				13F61E5E1FA85C5300D458F1 /* movieDetailed */,
-				13F61E601FA85C5300D458F1 /* MovieModel.swift */,
-				13F61E611FA85C5300D458F1 /* MovieViewController.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -219,6 +221,28 @@
 				13F61EC91FA871FF00D458F1 /* CWStarRateView.m */,
 			);
 			path = StarScore;
+			sourceTree = "<group>";
+		};
+		13F61ECC1FA9605600D458F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13F61ECD1FA9620500D458F1 /* MovieView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13F61ECF1FA9D0D600D458F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13F61ED01FA9D0EE00D458F1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		88346EFB0CD210ACF2EEBEDD /* Pods */ = {
@@ -370,7 +394,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13F61E811FA85C5300D458F1 /* MovieModel.swift in Sources */,
 				13F61E881FA85C5300D458F1 /* NavigationViewController.swift in Sources */,
 				13F61E821FA85C5300D458F1 /* MovieViewController.swift in Sources */,
 				13F61E8B1FA85C5300D458F1 /* TabBarViewController.swift in Sources */,
@@ -381,6 +404,7 @@
 				13F61E7E1FA85C5300D458F1 /* MovieCollectionViewCell.swift in Sources */,
 				13F61E831FA85C5300D458F1 /* MusicViewController.swift in Sources */,
 				13F61E801FA85C5300D458F1 /* DetailedViewController.swift in Sources */,
+				13F61ECE1FA9620500D458F1 /* MovieView.swift in Sources */,
 				13F61E781FA85C5300D458F1 /* AppDelegate.swift in Sources */,
 				13F61E7B1FA85C5300D458F1 /* BookViewController.swift in Sources */,
 				13F61ECA1FA871FF00D458F1 /* CWStarRateView.m in Sources */,
@@ -522,7 +546,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Class/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.com.123456789;
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.12345678912;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -546,7 +570,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Class/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.com.123456789;
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.12345678912;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

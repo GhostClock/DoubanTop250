@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 
 class NetWorking: NSObject {
+    static let shendInstance = NetWorking()
+    private override init() {}
     
     func netWorking() -> Int {
         let net = NetworkReachabilityManager()
