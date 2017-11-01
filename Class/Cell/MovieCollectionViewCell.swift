@@ -19,22 +19,22 @@ class MovieCollectionViewCell: UICollectionViewCell {
         numberLable.snp.makeConstraints { (make) in
             make.left.equalTo(5)
             make.top.equalTo(2)
-            make.width.equalTo(100)
-            make.height.equalTo(20)
+            make.width.equalTo(40)
+            make.height.equalTo(19)
         }
         contentView.addSubview(scoreLable)
         scoreLable.snp.makeConstraints { (make) in
             make.right.equalTo(-5)
             make.top.equalTo(4)
-            make.width.equalTo(50)
+            make.width.equalTo(40)
             make.height.equalTo(14)
         }
         contentView.addSubview(starScoreView)
         starScoreView.snp.makeConstraints { (make) in
-            make.left.equalTo(50)
-            make.right.equalTo(scoreLable.snp.left).offset(2)
+            make.right.equalTo(scoreLable.snp.left)
             make.top.equalTo(4)
             make.height.equalTo(15)
+            make.width.equalTo(80)
         }
         contentView.addSubview(imageView)
         imageView.snp.makeConstraints { (make) in
@@ -71,6 +71,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: 创建子控件
     var scoreLable:UILabel = {
         let score = UILabel()
         score.textColor = UIColor(red: 230/255.0, green:0/255.0, blue:172/255.0,alpha:1)
@@ -87,12 +88,11 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }()
     
     var starScoreView:CWStarRateView = {
-        let starScore = CWStarRateView(frame: CGRect(x: 40, y: 4, width: 80, height: 15))
+        let starScore = CWStarRateView(frame: CGRect(x: 0, y: 0, width: 80, height: 15))
         starScore.allowIncompleteStar = false;
         starScore.hasAnimation = false;
         return starScore
     }()
-    
     
     var imageView:UIImageView = {
         let imageView = UIImageView()
@@ -113,5 +113,4 @@ class MovieCollectionViewCell: UICollectionViewCell {
         title.font = UIFont(name:"Thonburi",size: 12)
         return title
     }()
-
 }

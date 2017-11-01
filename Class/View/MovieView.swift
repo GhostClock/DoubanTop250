@@ -53,7 +53,7 @@ class MovieView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, U
         let imageUrl:URL = URL(string: "\(dataModel.images_url["large"]!)")!
         cell.imageView.af_setImage(withURL: imageUrl)
         cell.starScoreView.scorePercent = (dataModel.rating["average"]! as! CGFloat) / 10
-        cell.scoreLable.text    =  "\(dataModel.rating["average"]! as! Double) 分"
+        cell.scoreLable.text    =  "\(dataModel.rating["average"]! as! Double)分"
         cell.cnTitleLable.text  =  "\(dataModel.title)"
         cell.enTitleLabel.text  =  "\(dataModel.original_title)"
         

@@ -99,6 +99,22 @@
 			path = UIkit;
 			sourceTree = "<group>";
 		};
+		1340FD1A1FA9DFAC00DB6CAF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				13F61E5C1FA85C5300D458F1 /* MovieCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1340FD1B1FA9DFAC00DB6CAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13F61ECD1FA9620500D458F1 /* MovieView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		13F15E931D3DBD9800B2ABC1 = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +137,8 @@
 		13F61E511FA85C5300D458F1 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				13F61ED01FA9D0EE00D458F1 /* Cell */,
-				13F61ECF1FA9D0D600D458F1 /* View */,
+				1340FD1A1FA9DFAC00DB6CAF /* Cell */,
+				1340FD1B1FA9DFAC00DB6CAF /* View */,
 				13F61E521FA85C5300D458F1 /* AppDelegate.swift */,
 				13F61EB71FA86AD500D458F1 /* Utilities */,
 				13F61E561FA85C5300D458F1 /* Book */,
@@ -145,9 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				13F61E611FA85C5300D458F1 /* MovieViewController.swift */,
-				13F61E5C1FA85C5300D458F1 /* MovieCollectionViewCell.swift */,
 				13F61E5D1FA85C5300D458F1 /* MovieData.swift */,
-				13F61ECC1FA9605600D458F1 /* View */,
 				13F61E5E1FA85C5300D458F1 /* movieDetailed */,
 			);
 			path = Movie;
@@ -221,28 +235,6 @@
 				13F61EC91FA871FF00D458F1 /* CWStarRateView.m */,
 			);
 			path = StarScore;
-			sourceTree = "<group>";
-		};
-		13F61ECC1FA9605600D458F1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				13F61ECD1FA9620500D458F1 /* MovieView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		13F61ECF1FA9D0D600D458F1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		13F61ED01FA9D0EE00D458F1 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		88346EFB0CD210ACF2EEBEDD /* Pods */ = {

@@ -10,8 +10,6 @@ import UIKit
 import AlamofireImage
 import MBProgressHUD
 
-
-
 class MovieViewController: RootViewController {
     
     var _collectionView: UICollectionView!
@@ -69,28 +67,24 @@ class MovieViewController: RootViewController {
         moiveView.createRefreshView(footerAction: { (footer) in
             weakSelf?.count += 10
             weakSelf?.getDate((weakSelf?.count)!, count: 10)
+            print("count = \((weakSelf?.count)!)")
         }) { (header) in
             weakSelf?._movieView.dataSource.removeAllObjects()
             weakSelf?.getDate(0, count: 10)
         }
     }
-
+    // MARK: 请求数据
     func getDate(_ start:Int,count:Int) -> Void {
         MovieData.shendInstance.createGetData(url: "https://api.douban.com/v2/movie/top250?start=\(start)&count=\(count)" as NSString, responseSuccess: { (responseData) in
             guard responseData is [String: Any] else{
                 print("guard \(type(of: responseData))")
                 return
             }
-            print("----\(type(of: responseData))")
             let dict = responseData as! Dictionary<String, AnyObject>
-            print(dict["title"]!)
-        
             if ((dict["subjects"]! as! NSArray).count > 0) {
-                
                 for subjectsDic in (dict["subjects"]! as! NSArray) {
                     let movieModel = MovieModel()
                     let subDic = subjectsDic as! Dictionary<String, AnyObject>
-                    movieModel.rating           =   subDic["rating"] as! NSDictionary
                     movieModel.rating           =   subDic["rating"] as! NSDictionary
                     movieModel.genres           =   subDic["genres"] as! NSArray
                     movieModel.title            =   subDic["title"] as! NSString
@@ -116,7 +110,7 @@ class MovieViewController: RootViewController {
                 self._collectionView.mj_footer.endRefreshingWithNoMoreData()
             }
         }) { (error) in
-            
+            print(error.localizedDescription)
         }
     }
     
