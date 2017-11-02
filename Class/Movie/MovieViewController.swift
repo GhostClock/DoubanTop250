@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 import MBProgressHUD
 
-class MovieViewController: RootViewController {
+class MovieViewController: RootViewController ,DetailedViewControllerDelegate{
     
     var _collectionView: UICollectionView!
     var _movieView: MovieView!
@@ -60,6 +60,10 @@ class MovieViewController: RootViewController {
         moiveView.clickdidSelectItemAt { (collection, indexPath) in
             let dataModel = self._movieView.dataSource[indexPath.item] as! MovieModel
             let DetailedVC = DetailedViewController()
+            DetailedVC.delegate = self
+            DetailedVC.changeValue(value: { (value) in
+                print("blockChange \(value)")
+            })
             DetailedVC._title = dataModel.title as String
             self.navigationController!.pushViewController(DetailedVC, animated: true)
         }
@@ -70,9 +74,15 @@ class MovieViewController: RootViewController {
             print("count = \((weakSelf?.count)!)")
         }) { (header) in
             weakSelf?._movieView.dataSource.removeAllObjects()
+            weakSelf?.count = 0
             weakSelf?.getDate(0, count: 10)
         }
     }
+    
+    func changeValue(value: Int) {
+        print("delegateChange \(value)")
+    }
+    
     // MARK: 请求数据
     func getDate(_ start:Int,count:Int) -> Void {
         MovieData.shendInstance.createGetData(url: "https://api.douban.com/v2/movie/top250?start=\(start)&count=\(count)" as NSString, responseSuccess: { (responseData) in
@@ -112,6 +122,10 @@ class MovieViewController: RootViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
+    }
+    
+    deinit {
+        print("MovieViewController deinit")
     }
     
     override func didReceiveMemoryWarning() {
