@@ -10,6 +10,7 @@ import UIKit
 import AlamofireImage
 import MBProgressHUD
 
+
 class MovieViewController: RootViewController ,DetailedViewControllerDelegate{
     
     var _collectionView: UICollectionView!
@@ -57,17 +58,17 @@ class MovieViewController: RootViewController ,DetailedViewControllerDelegate{
         _collectionView.snp.makeConstraints { (make) in
             make.edges.equalTo(0)
         }
+        weak var weakSelf = self
         moiveView.clickdidSelectItemAt { (collection, indexPath) in
-            let dataModel = self._movieView.dataSource[indexPath.item] as! MovieModel
+            let dataModel = weakSelf?._movieView.dataSource[indexPath.item] as! MovieModel
             let DetailedVC = DetailedViewController()
-            DetailedVC.delegate = self
+            DetailedVC.delegate = weakSelf
             DetailedVC.changeValue(value: { (value) in
                 print("blockChange \(value)")
             })
             DetailedVC._title = dataModel.title as String
             self.navigationController!.pushViewController(DetailedVC, animated: true)
         }
-        weak var weakSelf = self
         moiveView.createRefreshView(footerAction: { (footer) in
             weakSelf?.count += 10
             weakSelf?.getDate((weakSelf?.count)!, count: 10)
@@ -83,7 +84,7 @@ class MovieViewController: RootViewController ,DetailedViewControllerDelegate{
         print("delegateChange \(value)")
     }
     
-    // MARK: 请求数据
+    // MARK: - 请求数据
     func getDate(_ start:Int,count:Int) -> Void {
         MovieData.shendInstance.createGetData(url: "https://api.douban.com/v2/movie/top250?start=\(start)&count=\(count)" as NSString, responseSuccess: { (responseData) in
             guard responseData is [String: Any] else{

@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Class/CoreData/DoubanTop+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Class/CoreData/DoubanTop+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:DoubanTop250.xcodeproj">
    </FileRef>
    <FileRef

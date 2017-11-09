@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1314C5FA1FA8B08400617E3D /* CGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314C5F91FA8B08400617E3D /* CGButton.swift */; };
+		132F882C1FB3E32000DCF72B /* CoreDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132F882B1FB3E32000DCF72B /* CoreDataObject.swift */; };
+		133A085B1FB3D93200336B92 /* DoubanTop250.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 133A08591FB3D93200336B92 /* DoubanTop250.xcdatamodeld */; };
 		13F61E781FA85C5300D458F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E521FA85C5300D458F1 /* AppDelegate.swift */; };
 		13F61E7B1FA85C5300D458F1 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E571FA85C5300D458F1 /* BookViewController.swift */; };
 		13F61E7E1FA85C5300D458F1 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F61E5C1FA85C5300D458F1 /* MovieCollectionViewCell.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		1314C5F91FA8B08400617E3D /* CGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGButton.swift; sourceTree = "<group>"; };
+		132F882B1FB3E32000DCF72B /* CoreDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataObject.swift; sourceTree = "<group>"; };
+		133A085A1FB3D93200336B92 /* DoubanTop250.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoubanTop250.xcdatamodel; sourceTree = "<group>"; };
 		13F15E9C1D3DBD9800B2ABC1 /* DoubanTop250.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanTop250.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F61E521FA85C5300D458F1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13F61E571FA85C5300D458F1 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,14 @@
 			path = UIkit;
 			sourceTree = "<group>";
 		};
+		133A085C1FB3DAC600336B92 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				132F882B1FB3E32000DCF72B /* CoreDataObject.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		1340FD1A1FA9DFAC00DB6CAF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,9 +149,10 @@
 		13F61E511FA85C5300D458F1 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				13F61E521FA85C5300D458F1 /* AppDelegate.swift */,
+				133A085C1FB3DAC600336B92 /* CoreData */,
 				1340FD1A1FA9DFAC00DB6CAF /* Cell */,
 				1340FD1B1FA9DFAC00DB6CAF /* View */,
-				13F61E521FA85C5300D458F1 /* AppDelegate.swift */,
 				13F61EB71FA86AD500D458F1 /* Utilities */,
 				13F61E561FA85C5300D458F1 /* Book */,
 				13F61E5B1FA85C5300D458F1 /* Movie */,
@@ -198,6 +211,7 @@
 		13F61E8D1FA85E1C00D458F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				133A08591FB3D93200336B92 /* DoubanTop250.xcdatamodeld */,
 				13F61E8E1FA85E1C00D458F1 /* Assets.xcassets */,
 				13F61E8F1FA85E1C00D458F1 /* LaunchScreen.storyboard */,
 				13F61E911FA85E1C00D458F1 /* InfoPlist.strings */,
@@ -390,8 +404,10 @@
 				13F61E821FA85C5300D458F1 /* MovieViewController.swift in Sources */,
 				13F61E8B1FA85C5300D458F1 /* TabBarViewController.swift in Sources */,
 				13F61EBF1FA86AD500D458F1 /* GCFoundation.swift in Sources */,
+				133A085B1FB3D93200336B92 /* DoubanTop250.xcdatamodeld in Sources */,
 				13F61E8A1FA85C5300D458F1 /* RootViewController.swift in Sources */,
 				13F61E7F1FA85C5300D458F1 /* MovieData.swift in Sources */,
+				132F882C1FB3E32000DCF72B /* CoreDataObject.swift in Sources */,
 				1314C5FA1FA8B08400617E3D /* CGButton.swift in Sources */,
 				13F61E7E1FA85C5300D458F1 /* MovieCollectionViewCell.swift in Sources */,
 				13F61E831FA85C5300D458F1 /* MusicViewController.swift in Sources */,
@@ -538,7 +554,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Class/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.com.12345678912;
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.12345678901;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -562,7 +578,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Class/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.com.12345678912;
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.12345678901;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -593,6 +609,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		133A08591FB3D93200336B92 /* DoubanTop250.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				133A085A1FB3D93200336B92 /* DoubanTop250.xcdatamodel */,
+			);
+			currentVersion = 133A085A1FB3D93200336B92 /* DoubanTop250.xcdatamodel */;
+			path = DoubanTop250.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 13F15E941D3DBD9800B2ABC1 /* Project object */;
 }
